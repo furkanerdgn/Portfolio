@@ -1,0 +1,249 @@
+:root {
+    --black: #171321;
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+    --font-size: 1.3rem;
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size:var(--font-size);
+    background:var(--black);
+    color: var(--white);
+    font-family: var(--sans);
+}
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+.spacegrad{
+    width:100%;
+    height: 2px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.nav-icon{
+    width: 1rem;
+    height: 1rem;
+    fill: var(--aqua);
+}
+
+/*                      nav bar            */
+nav{
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 4rem 1rem;
+}
+.navigator{
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    list-style-type:none;
+    text-decoration: none;
+
+}
+.navigator :first-child{
+    flex-basis: 100%;
+    text-align: center;
+    color: var(--white);
+    text-decoration: none;
+}
+.navigator :hover{
+    color:var(--magenta);
+    fill: var(--magenta);
+}
+.button{
+    text-decoration: none;
+    background-color: var(--hotmag);
+    padding: 0.5rem;
+    border: solid 2px var(--white);
+    color: var(--white);
+    border-radius: 10%;
+    font-family: var(--mono);
+}
+.button:hover{
+    background-color: var(--magenta);
+    color: #0d314b;
+}
+/* intro*/
+
+
+.introduction{
+    padding: 4rem 1rem 10rem 1rem;
+    line-height: 1.5;
+}
+
+.introduction span{
+    color: var(--aqua);
+    font-family: var(--mono);
+    display: block;
+    font-size: 4rem;
+    font-weight: 300;
+}
+.introduction h2 {
+    font-size: 4rem;
+}
+.introduction p{
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/*           Project Section           */
+
+.frame{
+    max-width: 400px;
+    padding: 15px;
+    border-left:solid 1px var(--white);
+    border-top: solid 1px var(--white);
+    border-radius: 5%;
+}
+.image-calc{
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+.describe{
+    background-color: var(--black);
+    padding: 15px;
+    color:var(--white);
+    border-radius: 5px;
+    font-family: 1rem;
+    font-size: 1rem;
+}
+#projects{
+    padding: 4rem 1rem;
+    line-height: 1.5;
+    background-color: var(--dkblue);
+}
+
+.techs-list{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0px;
+    gap: 1rem;
+    margin: 0px;
+    font-size: 1rem;
+}
+#projects h3{
+    color:var(--aqua);
+}
+#projects h4{
+    margin: 0;
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+#projects h2{
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#projects a{
+    color: var(--magenta);
+}
+
+
+
+
+
+
+/* footer */
+
+.footer-svgs{
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    fill:var(--magenta);
+}
+.footer-link{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.footer-link >:last-child{
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.info{
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    text-align:center;
+}
+.footer-svgs:hover{
+    fill:var(--hotmag)
+}
+
+
+
+/* Contact Me */
+
+#Contact{
+    line-height: 1.5;
+    text-align: center;
+    padding: 4rem 0rem; 
+    margin: 0rem auto;
+    max-width: 400px;
+}
+.plum{
+    background-color: var(--plum);
+}
+#Contact > p{
+    padding: 1rem 0rem;
+}
+
+@media screen and (min-width:750px){
+    .navigator :first-child{
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto; 
+}
+    .grid{
+        display:grid;
+        grid-template-columns: repeat(8,1fr);
+        gap: 1rem;
+    }
+    .text{
+        grid-column: 5/9;
+        order: 2;
+        grid-row: 1;
+    }
+    figure{
+        grid-row: 1;
+        grid-column: 1/5;
+    }
+    .reverse{
+        grid-row: 1;
+        grid-column: 5/9;
+    }
+    .textreverse{
+        grid-row: 1;
+        grid-column: 1/5;
+    }
+}
